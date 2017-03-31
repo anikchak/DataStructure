@@ -2,8 +2,12 @@ package sorting;
 
 public class MergeSort {
 	
+	int merge = 0;
+	int split = 0;
+	int comp = 0;
 	public void mergeSort(int arr[],int start, int end){
 		if(start<end){
+			split++;
 		int mid = (start+end)/2;
 		//Divide the list into two halves
 		mergeSort(arr,start,mid);
@@ -14,6 +18,7 @@ public class MergeSort {
 		}
 	}
 	public void merge(int a[], int s, int m, int e){
+		merge++;
 		int lIndex = (m-s)+1;
 		int rIndex = e-m;
 		//Creating left/right arrays
@@ -32,6 +37,7 @@ public class MergeSort {
 		int i=0,j=0,k=s;
 		while(i<lIndex && j<rIndex){
 			if(lArr[i] < rArr[j]){
+				comp++;
 				a[k] = lArr[i];
 				i++;
 			}else{
@@ -63,13 +69,17 @@ public class MergeSort {
 		}
 	}
 	public static void main(String[] args) {
-		int arr[] = {14,33,27,10,35,19,42,44};
+	//	int arr[] = {14,33,27,10,35,19,42,44};
+		int arr[] = {1,2,3,4,5};
 		MergeSort obj = new MergeSort();
 		obj.mergeSort(arr, 0, arr.length-1);
 		System.out.print("\nMerge Sort[Asc]: ");
 		for(int a: arr){
 			System.out.print(" "+a);
 		}
+		System.out.println("\nMerges ="+obj.merge);
+		System.out.println("\nSplits ="+obj.split);
+		System.out.println("Comp ="+obj.comp);
 	}
 
 }
