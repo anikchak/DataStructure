@@ -46,8 +46,8 @@ public class CommonAnsestor<T> {
 		n.left.right.right = new Node<Integer>(8);
 		n.left.right.right.right = new Node<Integer>(90);
 		
-		int a = 8;
-		int b = 31;
+		int a = 31;
+		int b = 15211;
 		Node<Integer> node = ca.commonAnsestor(n, a, b);
 		if(node != null){
 			System.out.println("Common Ansestor["+a+","+b+"] = "+node.data);
