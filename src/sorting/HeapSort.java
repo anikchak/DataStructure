@@ -45,7 +45,8 @@ public class HeapSort {
 			arr[0] = arr[size-1];
 			arr[size-1] = maxElement;
 			size-- ;
-			buildHeap(arr,size);
+			//buildHeap(arr,size);
+			maxHeap(arr, size, 0);
 		}
 		
 		System.out.print("\nHeap Sort[Asc]:");

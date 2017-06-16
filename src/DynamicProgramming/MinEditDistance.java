@@ -6,7 +6,7 @@ public class MinEditDistance {
 		if(m == 0) return n;
 		if(n == 0) return m;
 		
-		if(s1.charAt(m-1) == s2.charAt(n-1)){
+		if(s1.charAt(m) == s2.charAt(n)){
 			return minEditDistanceRecur(s1, s2, m-1, n-1);
 		}
 		else{
@@ -70,10 +70,10 @@ public class MinEditDistance {
 		
 	public static void main(String[] args) {
 	
-		minEditDistanceDP("azced", "abcdef");
+		minEditDistanceDP("geek", "gesek");
 		String s1 = "azced";
 		String s2 = "abcdef";
-		System.out.println("Recur Edit Distance = "+minEditDistanceRecur(s1, s2,s1.length() , s2.length()));
+		System.out.println("Recur Edit Distance = "+minEditDistanceRecur(s1, s2,s1.length()-1 , s2.length()-1));
 	}
 
 }

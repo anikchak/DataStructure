@@ -22,15 +22,15 @@ class TestClass {
 */
         //BufferedReader
         try{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String line = br.readLine();
-        int n = Integer.parseInt(line);
+       // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        //String line = br.readLine();
+        //int n = Integer.parseInt(line);
 
         //Scanner
-        BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
-        String str = br1.readLine();
+      //  BufferedReader br1 = new BufferedReader(new InputStreamReader(System.in));
+        //String str = br1.readLine();
         
-        System.out.println(str);
+       // System.out.println(str);
         //System.out.println(n*2);
         /*
         if(n<0 || n>10){
@@ -41,10 +41,17 @@ class TestClass {
         }
         */
 	
-        System.out.println(n*2);
+       // System.out.println(n*2);
         
 
-        System.out.println(str);
+       // System.out.println(str);
+        Long a = 123L;
+        Long b = 123L;
+        if(a.equals(b)){
+        	System.out.println("true");
+        }else{
+        	System.out.println("false");
+        }
         }catch(Exception e){
         	e.printStackTrace();
         }
