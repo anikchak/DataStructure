@@ -34,10 +34,12 @@ public class LRUCache {
 		if(ht.containsKey(key)){
 			Node n = ht.get(key);
 			n.data = value;
-			n.prev.next = n.next;
-			n.next = head;
-			n.prev = null;
-			head = n;
+			if(n!=head){
+				n.prev.next = n.next;
+				n.next = head;
+				n.prev = null;
+				head = n;
+			}
 		}else if(ht.size() == limit){
 			//Remove the least used node
 			String tailKey = tail.key;
@@ -121,6 +123,7 @@ public class LRUCache {
 	public static void main(String[] args) {
 		LRUCache o = new LRUCache(5);
 		o.set("a", 1);
+		o.set("a", 10);
 		o.set("b", 2);
 		o.set("c", 3);
 		o.set("d", 4);
