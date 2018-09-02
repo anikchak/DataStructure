@@ -19,11 +19,12 @@ public class SnakeAndLadder {
 		Cell c = new Cell();
 		c.cellId = 0;
 		c.noOfMovesToReachHere = 0;
-		visited[0] = true;
+		//visited[0] = true;
 		q.add(c);
 		//Check all the six locations
 		while(!q.isEmpty()){
 			c = q.poll();
+			visited[c.cellId] = true;
 			//If this is the destination cell 
 			if(c.cellId == n-1){
 				System.out.println("Min no.of moves needed to reach here = "+c.noOfMovesToReachHere);

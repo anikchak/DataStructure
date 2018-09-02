@@ -2,7 +2,7 @@
  * Maximize the profit by buying and selling stocks in Ktransactions only.
  * Approach: Dynamic Programming: Let no. of txn be rows and Days or Price on each day as column
  * Formula to calculate max Profit in K txns will be 
- * MaxProfit = Max(By doing txn on that day, By No doing txn on that day)
+ * MaxProfit = Max(By doing txn on that day, By Not doing txn on that day)
  * maxProfit = max(T[i][j-1]//Not doing txn, maxDiff+price[j_th_day]); where maxDiff = max(maxDiff,T[i-1][j-1]-price[j-1])
  */
 package geekforgeeks;

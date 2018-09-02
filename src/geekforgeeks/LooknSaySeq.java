@@ -4,7 +4,6 @@
  */
 package geekforgeeks;
 
-import java.awt.geom.Area;
 import java.util.ArrayList;
 
 public class LooknSaySeq {

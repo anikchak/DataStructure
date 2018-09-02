@@ -38,7 +38,7 @@ public class InfixToPostFix {
 					 *  else, simply push
 					 */
 					if(!s.isEmpty()){
-					int opPrecedence = precedence.get(s.peek());
+					//int opPrecedence = precedence.get(s.peek());
 					int currentOpPreced = precedence.get(ch);
 					while(!s.isEmpty() && currentOpPreced <= precedence.get(s.peek())){
 						//char op = s.pop();

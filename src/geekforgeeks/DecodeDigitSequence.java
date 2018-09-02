@@ -1,7 +1,5 @@
 package geekforgeeks;
 
-import java.util.ArrayList;
-
 public class DecodeDigitSequence {
 
 	/*

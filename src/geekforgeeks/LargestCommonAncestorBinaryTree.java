@@ -125,7 +125,13 @@ public class LargestCommonAncestorBinaryTree {
 		if(aPresent && bPresent){
 			System.out.println("LCA2 = "+res.data);
 		}else{
-			System.out.println("aPresent = "+aPresent+" bPresent = "+bPresent);
+			//System.out.println("aPresent = "+aPresent+" bPresent = "+bPresent);
+			if(aPresent && findNode(res, b)){
+				System.out.println(res.data);
+			}
+			if(bPresent && findNode(res, a)){
+				System.out.println(res.data);
+			}
 		}
 	}
 	public Node lcaMethod2Util(Node n, int a, int b){
@@ -133,17 +139,19 @@ public class LargestCommonAncestorBinaryTree {
 		if(n==null) return null;
 		if(n.data == a){
 			aPresent = true;
+			return n;
 		}
 		if(n.data == b){
 			bPresent = true;
+			return n;
 		}
 		Node leftLCA = lcaMethod2Util(n.left, a, b);
 		Node righLCA = lcaMethod2Util(n.right, a, b);
-		
+		/*
 		if(n.data == a || n.data == b){
 			return n;
 		}
-		
+		*/
 		if(leftLCA!=null && righLCA!=null){
 			return n;
 		}

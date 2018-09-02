@@ -5,6 +5,7 @@ public class KthSmallestElementInBST {
 	class Node{
 		int data;
 		int leftChildCount = 0;
+		int rightChildCount = 0;
 		Node left;
 		Node right;
 		Node(int d){
@@ -25,6 +26,7 @@ public class KthSmallestElementInBST {
 					n.leftChildCount++;
 					n = n.left;
 				}else{
+					n.rightChildCount++;
 					n = n.right;
 				}
 			}
@@ -53,10 +55,27 @@ public class KthSmallestElementInBST {
 		}
 		return node;
 	}
+	public Node kthLargestElement(Node node, int k){
+		if(node == null) return null;
+		while(node!=null){
+			//System.out.println(node.data+" "+node.leftChildCount);
+			if(node.rightChildCount+1 == k){
+				return node;
+			}
+			if(node.rightChildCount>=k){
+				node = node.right;
+			}
+			else{
+				k = k - (node.rightChildCount+1);
+				node = node.left;
+			}
+		}
+		return node;
+	}
 	public void traverseTree(Node n){
 		if(n==null) return;
 		traverseTree(n.left);
-		System.out.print(n.data+"["+n.leftChildCount+"] ");
+		System.out.print(n.data+"["+n.leftChildCount+"] "+"["+n.rightChildCount+"] ");
 		traverseTree(n.right);
 	}
 	public static void main(String[] args) {
@@ -72,7 +91,8 @@ public class KthSmallestElementInBST {
 		//Finding kth smallest element
 		for(int i=0;i<a.length;i++){
 			Node kthSmallest = k.kthSmallestElement(root, i+1);
-			System.out.println("Smallest Element when k = "+(i+1)+" is = "+(kthSmallest!=null ? kthSmallest.data: null) );
+			Node kthLargest = k.kthLargestElement(root, i+1);
+			System.out.println("Smallest Element when k = "+(i+1)+" is = "+(kthSmallest!=null ? kthSmallest.data: null)+" Largest Element when k = "+(i+1)+" is = "+(kthLargest!=null ? kthLargest.data: null) );
 		}
 	}
 

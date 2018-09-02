@@ -65,10 +65,18 @@ public class SumOfTwoLL {
 			/*
 			 * Method 2: Add new 0 nodes before in the smaller list 
 			 */
+			Node res = null;
 			if(sz1>sz2){
-				return addDiff(n1,n2,diff,0);
+				res = addDiff(n1,n2,diff,0);
 			}else{
-				return addDiff(n2,n1,diff,0);
+				res =  addDiff(n2,n1,diff,0);
+			}
+			if(carry>0){
+				Node newNode = new Node(carry);
+				newNode.next = res;
+				return newNode;
+			}else{
+				return res;
 			}
 			/*
 			 * End of Method 2 
@@ -120,11 +128,11 @@ public class SumOfTwoLL {
 		// TODO Auto-generated method stub
 		SumOfTwoLL s = new SumOfTwoLL();
 		Node n1 = s.new Node(9);
-		n1.next = s.new Node(8);
-		n1.next.next = s.new Node(7);
-		n1.next.next.next = s.new Node(6);
-		Node n2 = s.new Node(5);
-		n2.next = s.new Node(4);
+		n1.next = s.new Node(9);
+		n1.next.next = s.new Node(9);
+		n1.next.next.next = s.new Node(8);
+		Node n2 = s.new Node(1);
+		//n2.next = s.new Node(4);
 		Node res = s.findSum(n2, n1);
 		s.traverse(res);
 	}

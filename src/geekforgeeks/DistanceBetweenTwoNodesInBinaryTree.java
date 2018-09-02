@@ -9,8 +9,6 @@ Dist(n1, n2) is the distance between n1 and n2.
  */
 package geekforgeeks;
 
-import geekforgeeks.LowestCommonAncestorInBinaryTree.Node;
-
 public class DistanceBetweenTwoNodesInBinaryTree {
 
 	class Node{
@@ -88,6 +86,7 @@ public class DistanceBetweenTwoNodesInBinaryTree {
 		System.out.println("Distance Between 4,3 = "+l.findDistance(n, 4, 3));
 		System.out.println("Distance Between 2,5 = "+l.findDistance(n, 2, 5));
 		System.out.println("Distance Between 1,8 = "+l.findDistance(n, 1, 8));
+		System.out.println("Distance Between 1,8 = "+l.findDistance(n, 1, 18));
 	}
 
 }

@@ -84,7 +84,7 @@ public class RearrangeCharacters {
 			prev = curr;
 		}
 		if(sb.toString().length()!=s.length()){
-			System.out.println("Rearranged String for input "+s+" is not possible ");
+			System.out.println("Rearranged String for input "+s+" is not possible "+sb.toString());
 		}else{
 			System.out.println("Rearranged String for input "+s+" = "+sb.toString());
 		}

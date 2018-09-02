@@ -8,31 +8,27 @@ public class MaxProductArray {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int arr[] = {-2, -3, 0, -2, -40};
-		int maxPos=1;
-		int maxNeg=1;
-		int max=0;
+		//int arr[] = {-2, -3, 0, -2, -40};
+		int arr[] = {-1,-2,-3,4};
+		int positive=1, negetive=1, ans=Integer.MIN_VALUE;
 		for(int i=0;i<arr.length;i++){
-			if(arr[i]==0){
-				maxPos=1;
-				maxNeg=1;
-			}else if(arr[i]>0){
-				maxPos = maxPos*arr[i];
-				if(maxNeg*arr[i] < 0){
-					maxNeg = maxNeg*arr[i];
-				}
-				max = Math.max(max, maxPos);
-			}else{
-				int temp = maxPos;
-				maxPos = Math.max(1, maxNeg*arr[i]);
-				maxNeg = temp*arr[i];
-				if(maxPos != 1){
-					max = Math.max(max, maxPos);
-				}
-						
+			if(arr[i]>0){
+				positive = positive*arr[i];
+				negetive = Math.min(1,negetive*arr[i]);
+			}else if(arr[i]==0){
+				positive = 0;
+				negetive = 1;
+			}else if(arr[i]<0){
+				int prePos = positive;
+				positive = negetive*arr[i];
+				negetive = prePos*arr[i];
+			}
+			ans = Math.max(ans, positive);
+			if(positive<=0){
+				positive=1;
 			}
 		}
-		System.out.println("max product = "+max);
+		System.out.println("Max Product = "+ans);
 	}
 
 }

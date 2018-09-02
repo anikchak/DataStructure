@@ -18,7 +18,7 @@ public class MinjumpsToReachEnd {
 	public static void main(String[] args) {
 		int a[] = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
 		int jumps[] = new int[a.length];
-		int moves[] = new int[a.length];
+		int moves[] = new int[a.length]; 
 		jumps[0] = 0;
 		for(int i=1;i<jumps.length;i++){
 			jumps[i] = Integer.MAX_VALUE;

@@ -37,7 +37,7 @@ public class Sudoku {
 				return false;
 			}
 		}
-		// Check if num is present in row
+		// Check if num is present in col
 		for (int i = 0; i < 9; i++) {
 			if (grid[i][col] == num) {
 				return false;

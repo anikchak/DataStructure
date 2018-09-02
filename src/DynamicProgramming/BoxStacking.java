@@ -13,8 +13,6 @@
  */
 package DynamicProgramming;
 
-import geekforgeeks.MaxHistogramArea;
-
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;

@@ -1,7 +1,5 @@
 package geekforgeeks;
 
-import java.util.Scanner;
-
 public class RotateArrayByD {
 
 	public static int gcd(int a, int b){

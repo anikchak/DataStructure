@@ -25,7 +25,7 @@ public class CuttingRod {
 				if(i>j){
 					T[i][j] = T[i-1][j];
 				}else{
-					T[i][j] = Math.max(T[i-1][j], val[i-1]+T[i][j-len[i-1]]);
+					T[i][j] = Math.max(T[i-1][j]/*Excluding*/, val[i-1]+T[i][j-len[i-1]]/*Including*/);
 				}
 			}
 		}

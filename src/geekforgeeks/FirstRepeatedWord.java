@@ -1,6 +1,6 @@
 package geekforgeeks;
 
-public class FirstNonRepeatWord {
+public class FirstRepeatedWord {
 
 	public static void firstNonRepeat(String s){
 		String str[] = s.split("\\s|\\t|,|:|\\;|-|\\.",-1);

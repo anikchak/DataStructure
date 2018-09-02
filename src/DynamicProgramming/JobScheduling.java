@@ -72,7 +72,6 @@ public class JobScheduling {
 		
 		for(int i=1;i<result.length;i++){
 			int j=0;
-			Times out1 = arr[j];
 			Times in = arr[i];
 			int currPro = result[i];
 			while(j<i){

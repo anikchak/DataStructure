@@ -65,9 +65,12 @@ public class DetectCycleInUndirectedGraphDisjointSet {
 	public static void main(String[] args) {
 		DetectCycleInUndirectedGraphDisjointSet d = new DetectCycleInUndirectedGraphDisjointSet(3);
 		d.addVertex(0, 1);
-		d.addVertex(1, 2);
+		d.addVertex(1, 2);  
 		d.addVertex(1, 0);
 		d.isCyclic();
+		DetectCycleInUndirectedGraphDisjointSet d1 = new DetectCycleInUndirectedGraphDisjointSet(2);
+		d1.addVertex(0, 1);
+		d1.isCyclic();
 	}
 
 }

@@ -1,7 +1,5 @@
 package geekforgeeks;
 
-import geekforgeeks.LevelOrderTraverse.Node;
-
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;

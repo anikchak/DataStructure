@@ -26,8 +26,6 @@ Following is the output tree
  */
 package geekforgeeks;
 
-import geekforgeeks.ConstructBTFromPostorderAndInorder.Node;
-
 public class CorrectBST {
 
 	class Node{

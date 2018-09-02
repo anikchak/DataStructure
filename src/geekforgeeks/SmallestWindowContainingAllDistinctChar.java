@@ -55,12 +55,12 @@ public class SmallestWindowContainingAllDistinctChar {
 				int len = i-start+1;
 				System.out.println("We are here itr = "+i+" len = "+len+ " start = "+start);
 				if(len<minLen){
-					minLen = len;
+					minLen = len; 
 					startIndex = start;
 				}
 			}
 		}
-		if(startIndex==-1){
+		if(startIndex==-1){	
 			System.out.println("No window with distinct characters found");
 		}else{
 			System.out.println("Min window length = "+minLen+" Start index = "+startIndex);
@@ -68,7 +68,7 @@ public class SmallestWindowContainingAllDistinctChar {
 		}
 	}
 	public static void main(String[] args) {
-		String s = "aab";
+		String s = "caab";
 		SmallestWindowContainingAllDistinctChar sw = new SmallestWindowContainingAllDistinctChar();
 		sw.findSmallestDistinctWindow(s);
 	}

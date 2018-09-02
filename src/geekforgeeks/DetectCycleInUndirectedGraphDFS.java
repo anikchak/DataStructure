@@ -78,7 +78,9 @@ public class DetectCycleInUndirectedGraphDFS {
 			visited[v] = true;
 			LinkedList<Vertex> list = vertex[v].adjVertex;
 			for(Vertex vt:list){
+				//System.out.println("v="+v+ " adj="+vt.value);
 				if(vt.value != parent){
+					//System.out.println(v+" "+vt.value+" "+parent);
 					boolean res = isCyclic(vt.value, visited, v);
 					if(res){
 						return true;
@@ -98,13 +100,17 @@ public class DetectCycleInUndirectedGraphDFS {
 		d.addEdge(0, 1);
 		d.addEdge(1, 0);
 		d.addEdge(1, 2);
-		d.addEdge(2, 2);
+	//	d.addEdge(2, 2);
 		d.isCyclic();
 		DetectCycleInUndirectedGraphDFS d1 = new DetectCycleInUndirectedGraphDFS(3);
 		d1.addEdge(0, 1);
 		d1.addEdge(1, 2);
 		d1.addEdge(2, 0);
 		d1.isCyclic();
+		DetectCycleInUndirectedGraphDFS d3 = new DetectCycleInUndirectedGraphDFS(2);
+		d3.addEdge(0, 0);
+		d3.addEdge(0, 1);
+		d3.isCyclic();
 	}
 
 }

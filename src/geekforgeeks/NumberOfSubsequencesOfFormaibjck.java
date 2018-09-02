@@ -22,7 +22,7 @@ package geekforgeeks;
 public class NumberOfSubsequencesOfFormaibjck {
 
 	public static void main(String[] args) {
-		String s = "abcabc";
+		String s = "abc";
 		int aCount = 0;
 		int bCount = 0;
 		int cCount = 0;

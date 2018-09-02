@@ -1,4 +1,4 @@
-package geekforgeeks;
+ package geekforgeeks;
 
 import java.util.Stack;
 

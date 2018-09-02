@@ -1,7 +1,5 @@
 package geekforgeeks;
 
-import java.util.LinkedList;
-
 public class IntegerToWords {
 
 
