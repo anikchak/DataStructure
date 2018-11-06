@@ -43,7 +43,7 @@ public class SmallestWindowContainingAllDistinctChar {
 			if(freqInput[(int)ch]==1){
 				count++;
 			}
-			System.out.println("itr = "+i+" count="+count);
+			//System.out.println("itr = "+i+" count="+count);
 			if(count==distinctCharCount){
 				//Check the frequency from element[start]
 				while(freqInput[s.charAt(start)]>1){
@@ -53,7 +53,7 @@ public class SmallestWindowContainingAllDistinctChar {
 					start++;
 				}
 				int len = i-start+1;
-				System.out.println("We are here itr = "+i+" len = "+len+ " start = "+start);
+				//System.out.println("We are here itr = "+i+" len = "+len+ " start = "+start);
 				if(len<minLen){
 					minLen = len; 
 					startIndex = start;
@@ -64,7 +64,11 @@ public class SmallestWindowContainingAllDistinctChar {
 			System.out.println("No window with distinct characters found");
 		}else{
 			System.out.println("Min window length = "+minLen+" Start index = "+startIndex);
+			if(minLen==distinctCharCount)
 			System.out.println("Window = "+s.substring(startIndex,startIndex+minLen));
+			else{
+				System.out.println("No continuous disctinct char window found");
+			}
 		}
 	}
 	public static void main(String[] args) {

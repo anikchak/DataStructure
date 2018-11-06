@@ -20,8 +20,8 @@ public class CoinChanging {
 		if(i == coin.length && total > 0){
 			return 0;
 		}
-		int c1 = changeRecusive(coin, total, i+1);
-		int c2 = changeRecusive(coin, total-coin[i], i);
+		int c1 = changeRecusive(coin, total, i+1); //coin not taken into consideration. Hence go to next coin denomination
+		int c2 = changeRecusive(coin, total-coin[i], i); //coin taken into consideration
 		return c1+c2;
 	}
 /*

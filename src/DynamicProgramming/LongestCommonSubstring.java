@@ -1,3 +1,4 @@
+/*Longest common substring - The substring needs to be CONTINUOUS*/
 package DynamicProgramming;
 
 public class LongestCommonSubstring {

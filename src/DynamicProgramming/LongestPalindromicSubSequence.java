@@ -2,6 +2,60 @@ package DynamicProgramming;
 
 public class LongestPalindromicSubSequence {
 	
+	/*
+	 * Use this method. Below method is also correct but this method is more understandable
+	 * Step 1: Reverse the string 
+	 * Step 2: Compute Longest Common SubSequence. The Length of LCS will be the length of longest palindromic sub-sequence 
+	 */
+	
+	public static void longestPalindromicSubSequenceLCS(String s){
+		//Longest palindromic sub-sequence LCS method
+		
+		//Step 1: Reverse the input string
+		StringBuffer sb = new StringBuffer(s);
+		sb.reverse();
+		String t = sb.toString();
+		
+		//Step 2: Compute LCS
+		int T[][] = new int[s.length()+1][t.length()+1];
+		for(int i=0;i<T.length;i++){
+			T[i][0] = 0;
+		}
+		for(int i=0;i<T[0].length;i++){
+			T[0][i] = 0;
+		}
+		
+		for(int i=1;i<T.length;i++){
+			for(int j=1;j<T[0].length;j++){
+				if(s.charAt(i-1)==t.charAt(j-1)){
+					T[i][j] = 1+T[i-1][j-1];
+				}else{
+					T[i][j] = Math.max(T[i-1][j], T[i][j-1]);
+				}
+			}
+		}
+		
+		int sLen = s.length();
+		int tLen = t.length();
+		int maxLen = T[sLen][tLen];
+		System.out.println("Length of longest panlindromic subsequence (LCS) = "+maxLen);
+		
+		//Computing sequence
+		int count = 0;
+		int i = sLen, j = tLen; 
+		while(count < maxLen){
+			if(T[i-1][j]==T[i][j]){
+				i--;
+			}else if(T[i][j-1]==T[i][j]){
+				j--;
+			}else if(1+T[i-1][j-1] == T[i][j]){
+				System.out.print(s.charAt(i-1));
+				i--;
+				j--;
+				count++;
+			}
+		}
+	}
 	public static void longestPalindromicSubSequence(String s){
 		int len = s.length();
 		int T[][] = new int[len][len];
@@ -56,6 +110,8 @@ public class LongestPalindromicSubSequence {
 	}
 	public static void main(String[] args) {
 		longestPalindromicSubSequence("agbdba");
+		System.out.println();
+		longestPalindromicSubSequenceLCS("agbdba");
 	}
 
 }

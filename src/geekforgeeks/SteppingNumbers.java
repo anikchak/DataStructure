@@ -68,7 +68,7 @@ public class SteppingNumbers {
 	}
 	public static void main(String[] args) {
 		SteppingNumbers s = new SteppingNumbers();
-		s.steppingNumbers(10, 15);
+		s.steppingNumbers(0, 15);
 	}
 
 }

@@ -48,7 +48,7 @@ public class MinCoinsNeeded {
 	public static void main(String[] args) {
 		int a[] = {7,2,3,6};
 		minCoinsNeeded(a, 13);
-		int b[] =  {9, 6, 5, 1};
+		int b[] =  {2, 1, 5, 1};
 		minCoinsNeeded(b, 11);
 	}
 

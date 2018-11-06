@@ -1,3 +1,4 @@
+/*Longest COmmon Sequence - The sequence of characters NEED NOT be continuous*/
 package DynamicProgramming;
 
 public class LongestCommonSequence {

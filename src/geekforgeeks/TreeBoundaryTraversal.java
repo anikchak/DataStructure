@@ -39,9 +39,9 @@ public class TreeBoundaryTraversal {
 		if(n.left!=null || n.right!=null){
 			System.out.print(n.data+" ");
 			if(n.right!=null){
-				leftBoundary(n.right);
+				rightBoundary(n.right);
 			}else if(n.left!=null){
-				leftBoundary(n.left);
+				rightBoundary(n.left);
 			}
 		}
 	}
@@ -81,6 +81,8 @@ public class TreeBoundaryTraversal {
         n.left.right.right = t.new Node(14);
         n.right = t.new Node(22);
         n.right.right = t.new Node(25);
+        n.right.right.left = t.new Node(30);
+        n.right.right.left.right = t.new Node(40);
 		t.boundaryTraversal(n);
 	}
 

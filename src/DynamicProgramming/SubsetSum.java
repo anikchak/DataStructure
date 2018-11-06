@@ -85,7 +85,7 @@ public class SubsetSum {
 	public static void main(String[] args) {
 		int a[] = {7,2,3,6};
 		System.out.println("Is Sum present = "+sumSubset(a, 6, 0));
-		sumSubsetDP(a, 13);
+		sumSubsetDP(a, 5);
 	}
 
 }
